@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+intmain()
+{
+	int num;
+	char ch;
+
+	while(1)
+	{
+		printf("정수 입력 : ");
+		scanf("%d", &num);
+
+		if(num%2==0)
+			printf("짝수입니다.\n");
+		else
+			printf("홀수입니다.\n");
+		printf("계속 하시겠습니까?(Y/N)");
+		scanf("%c", &ch);
+		fflush(stdin);
+		if(ch=='N' || ch=='n')
+			break;
+		if(ch=='Y' || ch=='y')
+			continue;
+		else
+			printf("잘못 입력");
+	}
+
+	system("pause");
+	return 0;
+}
